@@ -1,5 +1,8 @@
 body, html { 
-    margin: 0; padding: 0; height: 100%; width: 100%;
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    width: 100%;
     overflow: hidden; 
     background-color: #fdfaf5; /* Cor de fundo suave caso a imagem demore a carregar */
 }
@@ -34,8 +37,11 @@ body, html {
 
 /* Configuração do Convite Interno */
 #content {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh; 
-    width: 100%;
+    width: 100vw;
     background: url('./Assets/convite2.jpeg') no-repeat center center;
     background-size: 100% 100%;
     display: flex;
