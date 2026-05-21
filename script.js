@@ -23,3 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     });
 });
+
+document.getElementById('area-clicavel').addEventListener('click', function() {
+    const musica = document.getElementById('musica');
+    musica.play();
+
+    setTimeout(() => {
+        musica.pause();
+        musica.currentTime = 0;
+    }, 30000)
+})
