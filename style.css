@@ -5,7 +5,7 @@ html, body {
 
 #splash {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: url('./Assets/convite1.jpeg') no-repeat center center;
+    background: url('capa.png') no-repeat center center;
     background-size: 100% 100% !important;
     z-index: 100;
     transition: opacity 1s ease, visibility 1s;
@@ -13,17 +13,19 @@ html, body {
 
 #content {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: url('./Assets/convite2.jpeg') no-repeat center center;
+    background: url('convite.png') no-repeat center center;
     background-size: 100% 100% !important;
-}
-
-#area-clicavel {
-    position: absolute;
-    width: 20%; height: 15%;
-    bottom: 5%; left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
 }
 
 .hidden { display: none !important; }
 .fade-out { opacity: 0; visibility: hidden; }
+
+#area-clicavel {
+    position: absolute;
+    width: 100%;  /* Vamos deixar a tela toda clicável para facilitar */
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 101; /* Garante que fique por cima de tudo na capa */
+}
