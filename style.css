@@ -15,9 +15,10 @@ html, body {
 
 #content {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0; /* Garante que o final do convite apareça */
-    background: url('./Assets/convite2.jpeg') no-repeat center center;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('convite.png') no-repeat center center;
     background-size: 100% 100% !important;
+    filter: brightness(100%); /* Garante que a imagem não fique escurecida */
 }
 
 #area-clicavel {
