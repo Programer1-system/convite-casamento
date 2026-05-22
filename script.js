@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
             content.classList.remove('hidden');
             
             // Se você quiser adicionar música, descomente as linhas abaixo e adicione o arquivo mp3
-            // const audio = new Audio('suamusica.mp3');
-            // audio.play().catch(error => console.log("Autoplay bloqueado pelo navegador."));
+            const audio = new Audio('musica.mp3');
+            audio.play().catch(error => console.log("Autoplay bloqueado pelo navegador."));
         }, 1000);
     });
 });
