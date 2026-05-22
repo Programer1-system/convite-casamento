@@ -3,21 +3,10 @@ document.getElementById('area-clicavel').addEventListener('click', function() {
     const content = document.getElementById('content');
     const musica = document.getElementById('musica');
 
-    // Força o carregamento do áudio antes de tocar
-    musica.load(); 
+    // Toca a música
+    musica.play().catch(e => console.log("Erro ao tocar som:", e));
 
-    // Tenta tocar
-    var playPromise = musica.play();
-
-    if (playPromise !== undefined) {
-        playPromise.then(_ => {
-            console.log("Áudio começou a tocar com sucesso!");
-        }).catch(error => {
-            console.log("O navegador impediu o áudio: " + error);
-            alert("Erro no áudio: Verifique se o arquivo está na mesma pasta!");
-        });
-    }
-
+    // Transição de tela
     splash.classList.add('fade-out');
 
     setTimeout(() => {
@@ -25,8 +14,9 @@ document.getElementById('area-clicavel').addEventListener('click', function() {
         content.classList.remove('hidden');
     }, 1000);
 
+    // Para a música após 50 segundos (50000 milissegundos)
     setTimeout(() => {
         musica.pause();
         musica.currentTime = 0;
-    }, 50000);
+    }, 50000); 
 });

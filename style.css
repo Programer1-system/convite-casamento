@@ -1,33 +1,35 @@
-html, body { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    overflow: hidden;
+    background-color: #000; /* Fundo preto caso a imagem demore a carregar */
+}
 
 #splash {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: url('./Assets/convite1.jpeg') no-repeat center center;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0; /* Força preencher a tela visível */
+    background: url('capa.png') no-repeat center center;
     background-size: 100% 100% !important;
     z-index: 100;
     transition: opacity 1s ease, visibility 1s;
 }
 
 #content {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: url('./Assets/convite2.jpeg') no-repeat center center;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0; /* Garante que o final do convite apareça */
+    background: url('convite.png') no-repeat center center;
     background-size: 100% 100% !important;
 }
 
 #area-clicavel {
     position: absolute;
-    /* Ajuste estes valores conforme a posição do seu botão dourado na imagem */
-    width: 25%;    /* Largura da área de clique */
-    height: 10%;   /* Altura da área de clique */
-    bottom: 25%;   /* Aumente ou diminua isso para subir ou descer o botão */
+    width: 35%;  /* Ajuste a largura do clique sobre o botão dourado */
+    height: 12%; /* Ajuste a altura do clique */
+    bottom: 25%; /* Ajuste aqui para subir ou descer a área de clique */
     left: 50%;
     transform: translateX(-50%);
-    
-    /* Mantenha isso para ver onde está o botão durante os testes */
-    /* background-color: rgba(255, 0, 0, 0.3); */ 
-    
     cursor: pointer;
     z-index: 101;
+    /* background-color: rgba(255, 0, 0, 0.3); */ /* Remova o comentário se quiser ver a área de clique */
 }
 
 .hidden { display: none !important; }
