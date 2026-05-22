@@ -3,19 +3,28 @@ document.getElementById('area-clicavel').addEventListener('click', function() {
     const content = document.getElementById('content');
     const musica = document.getElementById('musica');
 
-    // Toca a música
-    musica.play();
+    // Força o carregamento do áudio antes de tocar
+    musica.load(); 
 
-    // Faz a capa desaparecer
+    // Tenta tocar
+    var playPromise = musica.play();
+
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+            console.log("Áudio começou a tocar com sucesso!");
+        }).catch(error => {
+            console.log("O navegador impediu o áudio: " + error);
+            alert("Erro no áudio: Verifique se o arquivo está na mesma pasta!");
+        });
+    }
+
     splash.classList.add('fade-out');
 
-    // Mostra o convite após 1 segundo
     setTimeout(() => {
         splash.style.display = 'none';
         content.classList.remove('hidden');
     }, 1000);
 
-    // Para a música após 30 segundos
     setTimeout(() => {
         musica.pause();
         musica.currentTime = 0;
