@@ -28,5 +28,5 @@ document.getElementById('area-clicavel').addEventListener('click', function() {
     setTimeout(() => {
         musica.pause();
         musica.currentTime = 0;
-    }, 30000);
+    }, 50000);
 });
