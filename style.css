@@ -1,7 +1,4 @@
-html, body {
-    margin: 0; padding: 0; height: 100%; width: 100%;
-    overflow: hidden;
-}
+html, body { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
 
 #splash {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
@@ -17,15 +14,16 @@ html, body {
     background-size: 100% 100% !important;
 }
 
-.hidden { display: none !important; }
-.fade-out { opacity: 0; visibility: hidden; }
-
 #area-clicavel {
     position: absolute;
-    width: 100%;  /* Vamos deixar a tela toda clicável para facilitar */
-    height: 100%;
-    top: 0;
-    left: 0;
+    width: 30%;  /* Ajuste o tamanho da largura do botão */
+    height: 15%; /* Ajuste a altura do botão */
+    bottom: 5%;  /* Ajuste a distância do fundo */
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
-    z-index: 101; /* Garante que fique por cima de tudo na capa */
+    z-index: 101;
 }
+
+.hidden { display: none !important; }
+.fade-out { opacity: 0; visibility: hidden; }

@@ -4,11 +4,12 @@ document.getElementById('area-clicavel').addEventListener('click', function() {
     const musica = document.getElementById('musica');
 
     // Toca a música
-    musica.play().catch(e => console.log("Erro ao tocar música:", e));
+    musica.play();
 
-    // Transição da capa
+    // Faz a capa desaparecer
     splash.classList.add('fade-out');
 
+    // Mostra o convite após 1 segundo
     setTimeout(() => {
         splash.style.display = 'none';
         content.classList.remove('hidden');
