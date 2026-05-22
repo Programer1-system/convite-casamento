@@ -16,11 +16,16 @@ html, body { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden;
 
 #area-clicavel {
     position: absolute;
-    width: 30%;  /* Ajuste o tamanho da largura do botão */
-    height: 15%; /* Ajuste a altura do botão */
-    bottom: 5%;  /* Ajuste a distância do fundo */
+    /* Ajuste estes valores conforme a posição do seu botão dourado na imagem */
+    width: 25%;    /* Largura da área de clique */
+    height: 10%;   /* Altura da área de clique */
+    bottom: 25%;   /* Aumente ou diminua isso para subir ou descer o botão */
     left: 50%;
     transform: translateX(-50%);
+    
+    /* Mantenha isso para ver onde está o botão durante os testes */
+    /* background-color: rgba(255, 0, 0, 0.3); */ 
+    
     cursor: pointer;
     z-index: 101;
 }
