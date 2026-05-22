@@ -1,14 +1,17 @@
 html, body {
-    margin: 0; padding: 0; width: 100%; height: 100%;
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: #ffffff; /* Fundo branco para tudo */
     overflow: hidden;
-    background-color: #000; /* Fundo preto caso a imagem demore a carregar */
 }
 
 #splash {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0; /* Força preencher a tela visível */
+    top: 0; left: 0; right: 0; bottom: 0;
     background: url('./Assets/convite1.jpeg') no-repeat center center;
-    background-size: 100% 100% !important;
+    background-size: cover; /* Melhor para manter a imagem centralizada */
     z-index: 100;
     transition: opacity 1s ease, visibility 1s;
 }
@@ -17,8 +20,8 @@ html, body {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: url('./Assets/convite2.jpeg') no-repeat center center;
-    background-size: 100% 100% !important;
-    filter: brightness(100%); /* Garante que a imagem não fique escurecida */
+    background-size: cover; /* Preenche a tela sem cortar */
+    background-color: #ffffff; /* Garante fundo branco caso a imagem não carregue */
 }
 
 #area-clicavel {
