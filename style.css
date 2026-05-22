@@ -7,7 +7,7 @@ html, body {
 #splash {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0; /* Força preencher a tela visível */
-    background: url('capa.png') no-repeat center center;
+    background: url('./Assets/convite1.jpeg') no-repeat center center;
     background-size: 100% 100% !important;
     z-index: 100;
     transition: opacity 1s ease, visibility 1s;
@@ -16,7 +16,7 @@ html, body {
 #content {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0; /* Garante que o final do convite apareça */
-    background: url('convite.png') no-repeat center center;
+    background: url('./Assets/convite2.jpeg') no-repeat center center;
     background-size: 100% 100% !important;
 }
 
