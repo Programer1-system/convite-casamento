@@ -20,7 +20,7 @@ html, body {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: url('./Assets/convite2.jpeg') no-repeat center center;
-    background-size: cover; /* Preenche a tela sem cortar */
+    background-size: 100% 100%; /* Preenche a tela sem cortar */
     background-color: #ffffff; /* Garante fundo branco caso a imagem não carregue */
 }
 
